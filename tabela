@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT exists SAAEC;
+
+use SAAEC;
+
+CREATE TABLE tb_paciente(
+id_paciente int primary key auto_increment,
+nome_paciente VARCHAR(100) NOT NULL,
+cpf_paciente VARCHAR(100) NOT NULL,
+rg_paciente VARCHAR (100) NOT NULL,
+telefone_paciente VARCHAR(100) NOT NULL,
+endereço_paciente VARCHAR (100) NOT NULL
+);
+
+SELECT * FROM tb_paciente;
+show tables;
+ALTER TABLE tb_paciente add column tipo_deficiencia VARCHAR (100) NOT NULL ;
+
+INSERT INTO tb_paciente (nome_paciente, cpf_paciente, rg_paciente, telefone_paciente, endereço_paciente, tipo_deficiencia)
+VALUES ('Maria', '89678412322', '987415796', '119571354782', 'Rua Guaipá - 239 ', 'Intelectual');
+SELECT * FROM tb_paciente;
+
